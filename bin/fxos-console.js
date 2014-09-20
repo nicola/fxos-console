@@ -39,9 +39,6 @@ FXOSConnect(opts, function(err, sim) {
   }
 
   opts.client = sim.client;
-  FXOSConsole(opts, function(err, app) {
-
-
-  })
+  FXOSConsole(opts).done()
 
 });
