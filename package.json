@@ -1,6 +1,6 @@
 {
   "name": "fxos-console",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Connect to the FirefoxOS Console",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,9 @@
     "console",
     "fxos"
   ],
+  "bin": {
+    "fxos-console": "./bin/fxos-console.js"
+  },
   "author": "Nicola Greco <me@nicola.io> (http://nicolagreco.com/)",
   "license": "ISC",
   "bugs": {
