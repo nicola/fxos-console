@@ -20,14 +20,6 @@ function Console(opts, callback) {
         output: opts.stdout || process.stdout,
         writer: fxconsole.writer.bind(fxconsole)
       });
-    });
-
-  if (callback) {
-    return promise.then(
-      function(app) { callback(null, app); }
-    ).done();
-  }
-  else {
-    return promise;
-  }
+    })
+    .nodeify(callback)
 }
