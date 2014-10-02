@@ -8,7 +8,7 @@ module.exports = Console;
 function Console(opts, callback) {
   opts = opts || {};
     
-  var promise = FindApp(opts)
+  return FindApp(opts)
     .then(function(app) {
       var fxconsole = new FirefoxREPL();
       fxconsole.client = opts.client;
@@ -21,5 +21,5 @@ function Console(opts, callback) {
         writer: fxconsole.writer.bind(fxconsole)
       });
     })
-    .nodeify(callback)
+    .nodeify(callback);
 }
